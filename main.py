@@ -7,5 +7,4 @@ new_aws = pd.pivot_table(aws, index='Employee Name', columns='Date', values='Wor
 new_aws.index.name = 'Name / Date'
 new_aws.columns = new_aws.columns.strftime('%Y-%m-%d')
 new_aws.fillna(0, inplace=True)
-print(new_aws)
 new_aws.to_csv('new_acme_worksheet.csv')
